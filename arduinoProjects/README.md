@@ -5,7 +5,7 @@ This program simulates a trafic light on a timer that changes every 10 seconds.
 ![](https://github.com/UofAScienceCamps2018/Arduino/blob/master/arduinoProjects/TrafficControl/Traffic_Light_Basic.png)
 ### Light Fader ###
 This program uses a potentiometer to dim an led. This is done using PWM(Pulse with modulation)
-
+![](https://github.com/UofAScienceCamps2018/Arduino/blob/master/arduinoProjects/LED_Dimmer/Led%20Dimmer.png)
 ## Intermediate ##
 ### Trafic Lights Pedestrian Crossing ###
 This program simulates a trafic light that changes when a crossing light button is pressed. 
