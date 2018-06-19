@@ -1,60 +1,38 @@
 /*
-  Arduino Starter Kit example
- Project 7  - Keyboard
- 
- This sketch is written to accompany Project 7 in the
- Arduino Starter Kit
- 
- Parts required:
- two 10 kilohm resistors
- 1 Megohm resistor 
- 220 ohm resistor
- 4 pushbuttons
- piezo
- 
- Created 13 September 2012
- by Scott Fitzgerald
- 
- http://arduino.cc/starterKit
- 
- This example code is part of the public domain 
+  Keyboard
+
+  Plays a pitch that changes based on a changing
+  input circuit:
+  * 3 pushbuttons from +5V to analog in 0 through
+  3
+  * 3 10K resistors from analog in 0 through 3 to
+  ground
+  * 8-ohm speaker on digital pin 8
 */
-// create an array of notes
-// the numbers below correspond to 
-// the frequencies of middle C, D, E, and F
-int notes[] = {262, 294, 330, 349};
 
-void setup() {
-    //start serial communication
-  Serial.begin(9600);
+int pos = 0;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(8, OUTPUT);
+  pinMode(A1, INPUT);
+  pinMode(A2, INPUT);
 }
 
-void loop() {
-  // create a local variable to hold the input on pin A0
-  int keyVal = analogRead(A0);
-  // send the value from A0 to the Serial Monitor
-  Serial.println(keyVal);
-  
-  // play the note corresponding to each value on A0
-  if(keyVal == 1023){
-    // play the first frequency in the array on pin 8
-    tone(8, notes[0]);
+void loop()
+{
+  // if button press on A0 is detected
+  if (digitalRead(A0) == HIGH) {
+    tone(8, 440, 100); // play tone 57 (A4 = 440 Hz)
   }
-  else if(keyVal >= 990 && keyVal <= 1010){
-    // play the second frequency in the array on pin 8
-    tone(8, notes[1]);
+  // if button press on A1 is detected
+  if (digitalRead(A1) == HIGH) {
+    tone(8, 494, 100); // play tone 59 (B4 = 494 Hz)
   }
-  else if(keyVal >= 505 && keyVal <= 515){
-    // play the third frequency in the array on pin 8
-    tone(8, notes[2]);
+  // if button press on A0 is detected
+  if (digitalRead(A2) == HIGH) {
+    tone(8, 523, 100); // play tone 60 (C5 = 523 Hz)
   }
-  else if(keyVal >= 5 && keyVal <= 10){
-    // play the fourth frequency in the array on pin 8
-    tone(8, notes[3]);
-  }
-  else{
-    // if the value is out of range, play no tone
-    noTone(8);
-  }
+  delay(10); // Delay a little bit to improve simulation performance
 }
-  
