@@ -1,6 +1,6 @@
 # Project Time #
 ## Beginner  ##
-### Trafic Lights ###
+#### Trafic Lights ####
 ### Light Fader ###
 
 ## Intermediate ##
