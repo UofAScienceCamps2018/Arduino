@@ -16,4 +16,4 @@ This program is plays different notes when buttons are pressed.
 ## Advanced ##
 ### LCD ###
 This program will display Hello World on a LCD screen 
-![](https://github.com/UofAScienceCamps2018/Arduino/blob/master/arduinoProjects/LCD/LCD_Base_bb_Fritz.png)
+![](https://github.com/UofAScienceCamps2018/Arduino/blob/master/arduinoProjects/LCD/LCD%20Screen%20.png)
