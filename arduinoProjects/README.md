@@ -2,6 +2,7 @@
 ## Beginner  ##
 ### Trafic Lights ###
 This program simulates a trafic light on a timer that changes every 10 seconds. 
+![alt text](https://github.com/UofAScienceCamps2018/Arduino/blob/master/arduinoProjects/TrafficControl/Traffic_Light_Basic.png)
 ### Light Fader ###
 This program uses a potentiometer to dim an led. This is done using PWM(Pulse with modulation)
 ## Intermediate ##
